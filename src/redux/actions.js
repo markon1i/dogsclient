@@ -52,30 +52,38 @@ export function getTemperament() {
 }
 
 export function orderSort(payload) {
-    return {
-        type: ORDER_SORT,
-        payload,
-    };
+    return async (dispatch) => {
+        return dispatch({
+            type: ORDER_SORT,
+            payload,
+        });
+    }
 }
 
 export function orderByWeight(payload) {
-    return {
-        type: ORDER_BY_WEIGHT,
-        payload,
-    };
+    return async (dispatch) => {
+        return dispatch({
+            type: ORDER_BY_WEIGHT,
+            payload,
+        });
+    }
 }
 
 export function filterByTemperament(payload) {
     /* console.log(payload); */
-    return {
-        type: FILTER_TEMPERAMENT,
-        payload,
-    };
+    return async (dispatch) => {
+        return dispatch({
+            type: FILTER_TEMPERAMENT,
+            payload,
+        });
+    }
 }
 
 export function filterCreate(payload) {
-    return {
-        type: FILTER_CREATE,
-        payload
+    return async (dispatch) => {
+        return dispatch({
+            type: FILTER_CREATE,
+            payload
+        });
     }
 }
